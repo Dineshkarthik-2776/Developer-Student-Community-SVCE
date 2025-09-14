@@ -79,19 +79,7 @@ const EventPopup = ({ event, isOpen, onClose }) => {
           <h2 className="popup-title">{event.name}</h2>
           <span className="popup-type">{event.type}</span>
         </div>
-        
-        <div className="popup-body">
-          <p className="popup-description">{event.fullDescription}</p>
-          
-          <div className="popup-details">
-            {event.details.map((detail, index) => (
-              <div key={index} className="popup-detail-item">
-                <div className="popup-detail-label">{detail.label}</div>
-                <div className="popup-detail-value">{detail.value}</div>
-              </div>
-            ))}
-          </div>
-          
+
           <div className="image-gallery">
             <h3 className="gallery-title">Event Gallery</h3>
     
@@ -135,6 +123,20 @@ const EventPopup = ({ event, isOpen, onClose }) => {
               </div>
             </div>
           </div>
+        
+        <div className="popup-body">
+          <p className="popup-description">{event.fullDescription}</p>
+          
+          <div className="popup-details">
+            {event.details.map((detail, index) => (
+              <div key={index} className="popup-detail-item">
+                <div className="popup-detail-label">{detail.label}</div>
+                <div className="popup-detail-value">{detail.value}</div>
+              </div>
+            ))}
+          </div>
+        
+
         </div>
       </div>
     </div>
